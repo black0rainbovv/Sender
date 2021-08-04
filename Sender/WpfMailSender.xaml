@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sender"
+        xmlns:fa="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
         Title="WpfMailSender" Height="450" Width="800">
     <Grid>
@@ -38,9 +39,17 @@
                                     <ComboBoxItem>smtp.gmail.com</ComboBoxItem>
                                     <ComboBoxItem>smtp.mail.ru</ComboBoxItem>
                                 </ComboBox>
-                                <Button Content="Добавить"/>
-                                <Button Content="Удалить"/>
-                                <Button Content="Редактировать"/>
+                                <Button ToolTip="Добавить"
+                                        fa:Awesome.Content="Solid_Plus"
+                                        Foreground="Blue"/>
+                                <Button ToolTip="Удалить"
+                                        fa:Awesome.Content="Solid_Times"
+                                        Foreground="Red"/>
+                                <Button ToolTip="Редактировать">
+                                    <fa:ImageAwesome Icon="Solid_Edit"
+                                                     Height="13"
+                                                     Foreground="DarkOrange"/>
+                                </Button>
                             </ToolBar>
                             <ToolBar Header="Отправители">
                                 <ComboBox MinWidth="90" MaxWidth="140" SelectedIndex="0">
